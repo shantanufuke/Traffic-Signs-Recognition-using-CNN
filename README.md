@@ -2,15 +2,11 @@
 
 ![image](https://github.com/shantanufuke/Traffic-Signs-Recognition-using-CNN/assets/104629474/5078a09d-3688-4d6f-9241-733f8acc19b2)
 
-In this era of Artificial Intelligence, humans are becoming more dependent on technology. With the enhanced technology, multinational companies like Google, Tesla, Uber, Ford, Audi, Toyota, Mercedes-Benz, and many more are working on automating vehicles. They are trying to make more accurate autonomous or driverless vehicles. You all might know about self-driving cars, where the vehicle itself behaves like a driver and does not need any human guidance to run on the road. Researchers are running many algorithms to ensure 100% road safety and accuracy. One such algorithm is Traffic Sign Recognition that we talk about in this blog.
-
-When you go on the road, you see various traffic signs like traffic signals, turn left or right, speed limits, no passing of heavy vehicles, no entry, children crossing, etc., that you need to follow for a safe drive. Likewise, autonomous vehicles also have to interpret these signs and make decisions to achieve accuracy. The methodology of recognizing which class a traffic sign belongs to is called Traffic signs classification.
-
-In this Deep Learning project, we will build a model for the classification of traffic signs available in the image into many categories using a convolutional neural network(CNN) and Keras library.
+We will build a model for the classification of traffic signs available in the image into many categories using a convolutional neural network(CNN) and Keras library.
 
 **Dataset for Traffic Sign Recognition**
 
-The image dataset is consists of more than 50,000 pictures of various traffic signs(speed limit, crossing, traffic signals, etc.) Around 43 different classes are present in the dataset for image classification. The dataset classes vary in size like some class has very few images while others have a vast number of images. The dataset doesn’t take much time and space to download as the file size is around 314.36 MB. It contains two separate folders, train and test, where the train folder is consists of classes, and every category contains various images.
+The image dataset consists of more than 50,000 pictures of various traffic signs(speed limit, crossing, traffic signals, etc.) Around 43 different classes are present in the dataset for image classification. It contains two separate folders, train and test, where the train folder consists of classes, and every category contains various images.
 
 ![image](https://github.com/shantanufuke/Traffic-Signs-Recognition-using-CNN/assets/104629474/dfea8ac8-5e7f-40fb-8ff9-9e7785662c3d)
 
@@ -34,12 +30,11 @@ The CustomModel class defines a convolutional neural network architecture for im
 To train our model, we will use the model.fit() method that works well after the successful building of model architecture. With the help of 64 batch sizes, we got 95%accuracy on training sets and acquired stability after 15 epochs.
 
 **Model testing**
-A folder named” test” is available in our dataset; inside that, we got the main working comma-separated file called” test.csv”. It comprises two things, the image paths, and their respective class labels. We can use the pandas’ python library to extract the image path with corresponding labels. Next, we need to resize our images to 30×30 pixels to predict the model and create a numpy array filled with image data. To understand how the model predicts the actual labels, we need to import accuracy_score from the sklearn.metrics.
+A folder named” test” is available in our dataset; inside that, we got the main working comma-separated file called” test.csv”. It comprises two things, the image paths, and their respective class labels. We can use the pandas’ Python library to extract the image path with corresponding labels. Next, we need to resize our images to 30×30 pixels to predict the model and create a numpy array filled with image data. To understand how the model predicts the actual labels, we need to import accuracy_score from the sklearn.metrics.
 
 **GUI for Traffic Signs Classifier**
-We will use a standard python library called Tkinter to build a graphical user interface(GUI) for our traffic signs recognizer. We need to create a separate python file named” gui.py” for this purpose. Firstly, we need to load our trained model ‘traffic_classifier.h5’ with the Keras library’s help of the deep learning technique. After that, we build the GUI to upload images and a classifier button to determine which class our image belongs. We create classify() function for this purpose; whence we click on the GUI button, this function is called implicitly. To predict the traffic sign, we need to provide the same resolutions of shape we used at the model training time. So, in the classify() method, we convert the image into the dimension of shape (1 * 30 * 30 * 3). The model.predict_classes(image) function is used for image prediction, it returns the class number(0-42) for every image. Then, we can extract the information from the dictionary using this class number.
+We will use a standard Python library called Tkinter to build a graphical user interface(GUI) for our traffic signs recognizer. We need to create a separate python file named” gui.py” for this purpose. Firstly, we need to load our trained model ‘traffic_classifier.h5’ with the Keras library’s help of the deep learning technique. After that, we build the GUI to upload images and a classifier button to determine which class our image belongs to. We create a classify() function for this purpose; whence we click on the GUI button, this function is called implicitly. To predict the traffic sign, we need to provide the same resolutions of shape we used at the model training time. So, in the classify() method, we convert the image into the dimension of shape (1 * 30 * 30 * 3). The model.predict_classes(image) function is used for image prediction, it returns the class number(0-42) for every image. Then, we can extract the information from the dictionary using this class number.
 
-
-Conclusion
+**Conclusion**
 We created a CNN model to identify traffic signs and classify them with 95% accuracy. We had observed the accuracy and loss changes over a large dataset. GUI of this model makes it easy to understand how signs are classified into several classes.
 
