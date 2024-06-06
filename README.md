@@ -39,11 +39,5 @@ Utilize a separate test dataset containing image paths and corresponding class l
 Resize test images to match the model input dimensions and generate a NumPy array with image data.
 Predict class labels using the trained model and evaluate predictions using accuracy_score from sklearn.metrics.
 
-## GUI for Traffic Signs Classifier:
-
-Use Gradio, a Python library for building customizable UI components for machine learning models, to create a graphical user interface.
-Build a GUI interface with radio buttons to upload images and a classifier button for prediction.
-Implement a classify() function to process uploaded images, predict traffic sign classes, and display results in a visually appealing format.
-
 ## Conclusion:
 We successfully developed a CNN model to classify traffic signs with 95% accuracy, leveraging a large dataset and implementing a custom architecture. The intuitive GUI built with Gradio enhances user interaction and understanding of the classification process, providing a seamless experience for traffic sign identification. 
