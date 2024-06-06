@@ -15,31 +15,31 @@ https://www.kaggle.com/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign
 
 ## Workflow:
 
-## 1) Dataset Exploration:
+## Dataset Exploration:
 
 Explore the dataset containing traffic sign images organized into subfolders representing different classes.
 Utilize the OS module to iterate through the images and their labels, and the PIL library to open and process image data.
 Store image data and labels into lists and convert them into NumPy arrays for model training.
 
-## 2) CNN Model Building:
+## CNN Model Building:
 
 Implement a custom CNN architecture using TensorFlow's Keras API, defining convolutional layers with ReLU activation, max-pooling, and dropout layers to prevent overfitting.
 Configure convolutional layers with varying filter sizes and dropout rates to capture hierarchical features from input images.
 Add dense layers with ReLU activation and a final output layer with softmax activation to yield class probabilities.
 Construct the model to process input images of specified shape, facilitating effective image classification.
 
-## 3) Model Training and Validation:
+## Model Training and Validation:
 
 Train the model using the model.fit() method, specifying batch size and epochs to optimize performance.
 Evaluate model performance on training and validation sets, monitoring accuracy and stability to ensure effective learning.
 
-## 4) Model Testing:
+## Model Testing:
 
 Utilize a separate test dataset containing image paths and corresponding class labels.
 Resize test images to match the model input dimensions and generate a NumPy array with image data.
 Predict class labels using the trained model and evaluate predictions using accuracy_score from sklearn.metrics.
 
-## 5) GUI for Traffic Signs Classifier:
+## GUI for Traffic Signs Classifier:
 
 Use Gradio, a Python library for building customizable UI components for machine learning models, to create a graphical user interface.
 Build a GUI interface with radio buttons to upload images and a classifier button for prediction.
